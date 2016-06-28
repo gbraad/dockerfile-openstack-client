@@ -16,6 +16,7 @@ Available as an [automated build](https://hub.docker.com/r/gbraad/openstack-clie
 Usage
 -----
 
+### Store `stackrc`
 Store your `stackrc` files in a local folder called `.stack`
 
 ```
@@ -27,13 +28,20 @@ drwxr-xr-x 31 ubuntu ubuntu 4096 Jun 28 02:52 ..
 -rw-r--r--  1 ubuntu ubuntu 1646 Jun  2 06:37 trystack
 ```
 
-
+### Setup an alias
 Setup a local alias makes running the container a lot easier
 
+#### Container based on _Ubuntu_
 ```
 $ alias stack='docker run -it  --rm -v ~/.stack:/root/.stack gbraad/openstack-client:ubuntu stack'
 ```
 
+#### Container based on _CentOS_
+```
+$ alias stack='docker run -it  --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
+```
+
+### Issue command
 
 Perform a `nova list` or `openstack server list` for Trystack
 
