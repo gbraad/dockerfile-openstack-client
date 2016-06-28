@@ -11,7 +11,7 @@ pip install --no-cache-dir .
 
 # Install tools
 curl -sSL https://raw.githubusercontent.com/gbraad/openstack-tools/master/stack -o /sbin/stack
-chmod u+x /sbin/stack
+chmod 0755 /sbin/stack
 
 # Cleanup
 apk del build-base linux-headers python-dev libffi-dev openssl-dev

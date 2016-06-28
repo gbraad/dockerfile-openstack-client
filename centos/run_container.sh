@@ -10,10 +10,6 @@ yum install -y \
 curl -sSL https://raw.githubusercontent.com/gbraad/ansible-playbooks/master/playbooks/install-openstack-client.yml -o /tmp/install-openstack-client.yml
 ansible-playbook /tmp/install-openstack-client.yml
 
-# Install tools
-curl -sSL https://raw.githubusercontent.com/gbraad/openstack-tools/master/stack -o /sbin/stack
-chmod u+x /sbin/stack
-
 # Cleanup
 yum remove -y \
     curl \
