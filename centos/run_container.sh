@@ -15,4 +15,7 @@ curl -sSL https://raw.githubusercontent.com/gbraad/openstack-tools/master/stack 
 chmod u+x /sbin/stack
 
 # Cleanup
+yum remove -y \
+    curl \
+    ansible
 yum clean all
