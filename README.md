@@ -9,8 +9,9 @@ Docker container image with the OpenStack client and 'stack' helper tool by @lar
 
 Available as an [automated build](https://hub.docker.com/r/gbraad/openstack-client/) from the Docker registry.
 
-  * Ubuntu: `docker pull gbraad/openstack-client:ubuntu`
+  * Alpine: `docker pull gbraad/openstack-client:alpine`
   * CentOS: `docker pull gbraad/openstack-client:centos`
+  * Ubuntu: `docker pull gbraad/openstack-client:ubuntu`
 
 
 Usage
@@ -33,16 +34,22 @@ drwxr-xr-x 31 ubuntu ubuntu 4096 Jun 28 02:52 ..
 Setup a local alias makes running the container a lot easier
 
 
-#### Container based on _Ubuntu_
-
+#### Container based on _Alpine_
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:ubuntu stack'
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:alpine stack'
 ```
 
 
 #### Container based on _CentOS_
 ```
 $ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
+```
+
+
+#### Container based on _Ubuntu_
+
+```
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:ubuntu stack'
 ```
 
 
