@@ -29,17 +29,22 @@ drwxr-xr-x 31 ubuntu ubuntu 4096 Jun 28 02:52 ..
 ```
 
 ### Setup an alias
+
 Setup a local alias makes running the container a lot easier
 
+
 #### Container based on _Ubuntu_
+
 ```
-$ alias stack='docker run -it  --rm -v ~/.stack:/root/.stack gbraad/openstack-client:ubuntu stack'
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:ubuntu stack'
 ```
+
 
 #### Container based on _CentOS_
 ```
-$ alias stack='docker run -it  --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
 ```
+
 
 ### Issue command
 
