@@ -7,11 +7,35 @@ OpenStack client
 Docker container image with the OpenStack client and 'stack' helper tool by @larsks
 
 
+Registries
+----------
+
+### Docker hub
+
 Available as an [automated build](https://hub.docker.com/r/gbraad/openstack-client/) from the Docker registry.
 
   * Alpine: `docker pull gbraad/openstack-client:alpine`
   * CentOS: `docker pull gbraad/openstack-client:centos`
   * Ubuntu: `docker pull gbraad/openstack-client:ubuntu`
+
+
+### Gitlab
+
+Alternative automated builds are available at [GitLab](https://gitlab.com/gbraad/openstack-client)
+
+  * Alpine: `docker pull registry.gitlab.com/gbraad/openstack-client:alpine`
+  * CentOS: `docker pull registry.gitlab.com/gbraad/openstack-client:centos`
+  * Ubuntu: `docker pull registry.gitlab.com/gbraad/openstack-client:ubuntu`
+
+
+Download
+--------
+
+If for some reason you can not access the above registries, you can also download and import the images from [BinTray](https://bintray.com/gbraad/generic/docker-openstack-client)
+
+```
+docker load -i gbraad-docker-openstack-client-alpine.tar.xz
+```
 
 
 Usage
