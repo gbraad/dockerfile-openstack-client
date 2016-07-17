@@ -41,7 +41,7 @@ docker load -i gbraad-docker-openstack-client-alpine.tar.xz
 Usage
 -----
 
-### Store `stackrc`
+### Cloud configurations
 Store your `stackrc` files in a local folder called `.stack`
 
 ```
@@ -53,20 +53,48 @@ drwxr-xr-x 31 ubuntu ubuntu 4096 Jun 28 02:52 ..
 -rw-r--r--  1 ubuntu ubuntu 1646 Jun  2 06:37 trystack
 ```
 
+Or place your `clouds.yaml` in `~/.config/openstack` More information about
+`clouds.yaml` can be found [here](http://docs.openstack.org/developer/python-openstackclient/configuration.html)
+
+```
+$ cat ~/.config/openstack/clouds.yaml
+```
+
+    clouds:
+      dreamhost:
+        auth:
+          auth_url: https://iad2.dream.io:5000/v2.0
+          project_name: dhc123456
+          username: firlas1
+          password: 0penSt4ck
+        region_name: RegionOne
+      trystack:
+        auth:
+          auth_url: http://8.43.86.2:5000/v2.0
+          project_name: facebook89115xxxx
+          username: facebook89115xxxx
+          password: xxxxxxxxxxxxxxxxx
+        region_name: RegionOne
+
+
 ### Setup an alias
 
 Setup a local alias makes running the container a lot easier
 
 
 #### Container based on _Alpine_
+
 ```
 $ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:alpine stack'
+$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack gbraad/openstack-client:alpine openstack'
 ```
 
 
 #### Container based on _CentOS_
+
 ```
 $ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
+$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack gbraad/openstack-client:centos openstack'
 ```
 
 
@@ -74,6 +102,7 @@ $ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-cli
 
 ```
 $ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:ubuntu stack'
+$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack gbraad/openstack-client:ubuntu openstack'
 ```
 
 
@@ -84,6 +113,11 @@ Perform a `nova list` or `openstack server list` for Trystack
 ```
 $ stack trystack nova list
 $ stack trystack openstack server list
+```
+
+Or using `clouds.yaml`:
+```
+$ openstack --os-cloud trystack server list
 ```
 
 
