@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM registry.gitlab.com/gbraad/ubuntu:xenial
 MAINTAINER Gerard Braad <me@gbraad.nl>
 
 ADD run_container.sh /tmp/

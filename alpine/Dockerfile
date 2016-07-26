@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM registry.gitlab.com/gbraad/alpine:3.4
 MAINTAINER Gerard Braad <me@gbraad.nl>
 
 ADD run_container.sh /tmp/

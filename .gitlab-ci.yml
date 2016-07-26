@@ -1,31 +1,27 @@
+image: docker:git
+services:
+- docker:dind
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+
+
 build_alpine:
-  image: docker:git
-  services:
-  - docker:dind
   script:
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
     - docker build -t registry.gitlab.com/gbraad/openstack-client:alpine ./alpine 
     - docker push registry.gitlab.com/gbraad/openstack-client:alpine
   only:
     - master
 
 build_centos:
-  image: docker:git
-  services:
-  - docker:dind
   script:
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
     - docker build -t registry.gitlab.com/gbraad/openstack-client:centos ./centos 
     - docker push registry.gitlab.com/gbraad/openstack-client:centos
   only:
     - master
 
 build_ubuntu:
-  image: docker:git
-  services:
-  - docker:dind
   script:
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
     - docker build -t registry.gitlab.com/gbraad/openstack-client:ubuntu ./ubuntu 
     - docker push registry.gitlab.com/gbraad/openstack-client:ubuntu
   only:

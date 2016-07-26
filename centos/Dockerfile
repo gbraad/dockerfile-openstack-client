@@ -1,4 +1,4 @@
-FROM centos:7
+FROM registry.gitlab.com/gbraad/centos:7
 MAINTAINER Gerard Braad <me@gbraad.nl>
 
 ADD run_container.sh /tmp/
