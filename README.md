@@ -10,22 +10,32 @@ Docker container image with the OpenStack client and 'stack' helper tool by @lar
 Registries
 ----------
 
-### Docker hub
-
-Available as an [automated build](https://hub.docker.com/r/gbraad/openstack-client/) from the Docker registry.
-
-  * Alpine: `docker pull gbraad/openstack-client:alpine`
-  * CentOS: `docker pull gbraad/openstack-client:centos`
-  * Ubuntu: `docker pull gbraad/openstack-client:ubuntu`
-
-
 ### Gitlab
 
-Alternative automated builds are available at [GitLab](https://gitlab.com/gbraad/openstack-client)
+Automated builds are available at [GitLab](https://gitlab.com/gbraad/openstack-client)
 
-  * Alpine: `docker pull registry.gitlab.com/gbraad/openstack-client:alpine`
-  * CentOS: `docker pull registry.gitlab.com/gbraad/openstack-client:centos`
-  * Ubuntu: `docker pull registry.gitlab.com/gbraad/openstack-client:ubuntu`
+  * Alpine:  
+    `docker pull registry.gitlab.com/gbraad/openstack-client:alpine`
+  * CentOS:  
+    `docker pull registry.gitlab.com/gbraad/openstack-client:centos`
+  * Fedora:  
+    `docker pull registry.gitlab.com/gbraad/openstack-client:fedora`
+  * Ubuntu:  
+    `docker pull registry.gitlab.com/gbraad/openstack-client:ubuntu`
+
+
+### Docker hub
+
+Alternative [automated build](https://hub.docker.com/r/gbraad/openstack-client/) are available from the Docker registry.
+
+  * Alpine:  
+    `docker pull gbraad/openstack-client:alpine`
+  * CentOS:  
+    `docker pull gbraad/openstack-client:centos`
+  * Fedora:  
+    `docker pull gbraad/openstack-client:fedora`
+  * Ubuntu:  
+    `docker pull gbraad/openstack-client:ubuntu`
 
 
 Download
@@ -65,8 +75,8 @@ $ cat ~/.config/openstack/clouds.yaml
         auth:
           auth_url: https://iad2.dream.io:5000/v2.0
           project_name: dhc123456
-          username: firlas1
-          password: 0penSt4ck
+          username: c4pash3n1
+          password: 0p3nSt4ck
         region_name: RegionOne
       trystack:
         auth:
@@ -85,24 +95,32 @@ Setup a local alias makes running the container a lot easier
 #### Container based on _Alpine_
 
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:alpine stack'
-$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack gbraad/openstack-client:alpine openstack'
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:alpine stack'
+$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:alpine openstack'
 ```
 
 
 #### Container based on _CentOS_
 
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:centos stack'
-$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack gbraad/openstack-client:centos openstack'
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:centos stack'
+$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:centos openstack'
+```
+
+
+#### Container based on _Fedora_
+
+```
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:fedora stack'
+$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:fedora openstack'
 ```
 
 
 #### Container based on _Ubuntu_
 
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack gbraad/openstack-client:ubuntu stack'
-$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack gbraad/openstack-client:ubuntu openstack'
+$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:ubuntu stack'
+$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:ubuntu openstack'
 ```
 
 
@@ -125,6 +143,7 @@ Thanks
 ------
 
   * Lars Kellogg-Stedman, for releasing [OpenStack Tools](https://github.com/larsks/openstack-tools)
+  * [GitLab](https://gitlab.com/) for providing a great infrastructure
 
 
 Authors
