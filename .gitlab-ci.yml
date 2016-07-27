@@ -20,6 +20,13 @@ build_centos:
   only:
     - master
 
+build_fedora:
+  script:
+    - docker build -t registry.gitlab.com/gbraad/openstack-client:fedora ./fedora 
+    - docker push registry.gitlab.com/gbraad/openstack-client:fedora
+  only:
+    - master
+
 build_ubuntu:
   script:
     - docker build -t registry.gitlab.com/gbraad/openstack-client:ubuntu ./ubuntu 

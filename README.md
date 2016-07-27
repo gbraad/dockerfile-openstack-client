@@ -4,7 +4,7 @@ OpenStack client
 !["Prompt"](https://raw.githubusercontent.com/gbraad/assets/gh-pages/icons/prompt-icon-64.png)
 
 
-Docker container image with the OpenStack client and 'stack' helper tool by @larsks
+Docker container image with the OpenStack client and 'stack' helper tool.
 
 
 Registries
@@ -26,7 +26,8 @@ Automated builds are available at [GitLab](https://gitlab.com/gbraad/openstack-c
 
 ### Docker hub
 
-Alternative [automated build](https://hub.docker.com/r/gbraad/openstack-client/) are available from the Docker registry.
+Alternative [automated build](https://hub.docker.com/r/gbraad/openstack-client/)
+are available from the Docker registry.
 
   * Alpine:  
     `docker pull gbraad/openstack-client:alpine`
@@ -41,7 +42,8 @@ Alternative [automated build](https://hub.docker.com/r/gbraad/openstack-client/)
 Download
 --------
 
-If for some reason you can not access the above registries, you can also download and import the images from [BinTray](https://bintray.com/gbraad/generic/docker-openstack-client)
+If for some reason you can not access the above registries, you can also download
+and import the images from [BinTray](https://bintray.com/gbraad/generic/docker-openstack-client)
 
 ```
 docker load -i gbraad-docker-openstack-client-alpine.tar.xz
