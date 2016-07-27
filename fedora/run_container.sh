@@ -3,6 +3,7 @@
 # Install dependencies
 dnf install -y \
     curl \
+    python2-dnf \
     ansible
 
 # Deploy openstackclient
@@ -10,7 +11,7 @@ curl -sSL https://raw.githubusercontent.com/gbraad/ansible-playbooks/master/play
 ansible-playbook /tmp/install-openstack-client.yml
 
 # Cleanup
+dnf clean all
 dnf remove -y \
     curl \
     ansible
-dnf clean all
