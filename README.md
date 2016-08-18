@@ -97,32 +97,32 @@ Setup a local alias makes running the container a lot easier
 #### Container based on _Alpine_
 
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:alpine stack'
-$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:alpine openstack'
+$ alias stack='docker run -it --rm -v $PWD:/workspace -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:alpine stack'
+$ alias openstack='docker run -it --rm -v $PWD:/workspace -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:alpine openstack'
 ```
 
 
 #### Container based on _CentOS_
 
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:centos stack'
-$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:centos openstack'
+$ alias stack='docker run -it --rm -v $PWD:/workspace -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:centos stack'
+$ alias openstack='docker run -it --rm -v $PWD:/workspace -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:centos openstack'
 ```
 
 
 #### Container based on _Fedora_
 
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:fedora stack'
-$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:fedora openstack'
+$ alias stack='docker run -it --rm -v $PWD:/workspace -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:fedora stack'
+$ alias openstack='docker run -it --rm -v $PWD:/workspace -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:fedora openstack'
 ```
 
 
 #### Container based on _Ubuntu_
 
 ```
-$ alias stack='docker run -it --rm -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:ubuntu stack'
-$ alias openstack='docker run -it --rm -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:ubuntu openstack'
+$ alias stack='docker run -it --rm -v $PWD:/workspace -v ~/.stack:/root/.stack registry.gitlab.com/gbraad/openstack-client:ubuntu stack'
+$ alias openstack='docker run -it --rm -v $PWD:/workspace -v ~/.config/openstack:/root/.config/openstack registry.gitlab.com/gbraad/openstack-client:ubuntu openstack'
 ```
 
 
